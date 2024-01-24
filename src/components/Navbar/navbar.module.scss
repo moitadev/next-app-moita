@@ -1,0 +1,18 @@
+@use '@/styles/variables.scss' as *;
+
+.nav_links {
+  display: flex;
+  justify-content: space-between;
+  a {
+    cursor: pointer;
+    &:hover {
+      color: var(--color-100);
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
