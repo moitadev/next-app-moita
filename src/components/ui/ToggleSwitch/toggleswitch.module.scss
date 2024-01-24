@@ -1,0 +1,39 @@
+@use '@/styles/variables.scss' as *;
+
+.toggleSwitch {
+  position: relative;
+  display: inline-block;
+}
+
+.toggleCheckbox {
+  display: none;
+}
+
+.toggleLabel {
+  display: block;
+  width: 55px;
+  height: 26px;
+  background-color: var(--bg-300);
+  border-radius: 25px;
+  position: relative;
+  cursor: pointer;
+}
+
+.toggleHandle {
+  position: absolute;
+  top: 50%;
+  left: 2px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  padding: 2px;
+  background-color: var(--color-100);
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.toggleCheckbox:checked + .toggleLabel .toggleHandle {
+  left: calc(100% - 23px);
+  transform: translateY(-50%);
+  transition: all 0.3s ease-in-out;
+}
