@@ -1,0 +1,44 @@
+.hero {
+  .container {
+    min-height: calc(100dvh - 80px);
+    .welcome-box {
+      position: relative;
+      height: 35dvh;
+      width: 100%;
+      img {
+        border-radius: 15px;
+      }
+    }
+    .smaller-box {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      height: 100%;
+      .inner-box {
+        background-color: var(--bg-300);
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: background-color 0.5s;
+        font-size: 64px;
+        &:hover {
+          background-color: var(--color-100);
+          color: var(--bg-100);
+        }
+      }
+    }
+  }
+}
+
+.link-absolute {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

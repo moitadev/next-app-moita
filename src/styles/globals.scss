@@ -1,0 +1,62 @@
+@use 'variables' as *;
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-100: #02cb9a;
+  --color-200: #80ead0;
+  --color-300: #52edc6;
+  --accent-100: #222;
+  --accent-200: #a4a4a4;
+  --text-100: #e5f5f1;
+  --text-200: #e0e0e0;
+  --bg-100: #212121;
+  --bg-200: #494949;
+  --bg-300: #313131;
+  background-color: var(--bg-100);
+  color: var(--text-100);
+  transition: all 0.3s ease-in-out;
+}
+
+::selection {
+  background-color: var(--color-100);
+  color: var(--accent-100);
+}
+
+.toggle-button {
+  border-radius: 100px;
+  background-color: var(--color-100);
+  padding: 0.35rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease-in-out;
+  }
+  .icon {
+    height: 1.25rem;
+    width: 1.25rem;
+    color: var(--accent-100);
+  }
+}
+
+.noise{
+  background-image: url(../assets/bright-rain.png);
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  mix-blend-mode: overlay;
+  opacity: 0.2;
+  pointer-events: none;
+}

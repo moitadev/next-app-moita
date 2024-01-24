@@ -1,0 +1,18 @@
+//justify content
+$justifyContent: (start, center, end);
+
+@each $justify in $justifyContent{
+    .justify-#{$justify}{
+        justify-content: #{$justify};
+    }
+}
+
+
+//justify content
+$alignItems: (start, center, end);
+
+@each $align in $justifyContent{
+    .align-#{$align}{
+        align-items: #{$align};
+    }
+}

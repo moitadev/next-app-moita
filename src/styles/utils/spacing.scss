@@ -1,0 +1,8 @@
+//paddings
+$paddingTop: (80);
+
+@each $pt in $paddingTop{
+    .pt-#{$pt}{
+        padding-top: #{$pt}px;
+    }
+}
