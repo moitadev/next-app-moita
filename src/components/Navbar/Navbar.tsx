@@ -8,14 +8,14 @@ import { useTheme } from '@/context/ThemeContext';
 import { ToggleSwitch } from '@/components';
 
 export const Navbar = () => {
-  const { isDarkMode } = useTheme();
+  const { isLightMode } = useTheme();
   return (
     <div className="container">
       <div className="row align-center">
         <div className="col col-6 align-center">
           <div className={styles.logo}>
             <Image src={icon} width={50} alt="Moita icon" />
-            {isDarkMode ? (
+            {isLightMode ? (
               <Image src={textDark} width={100} alt="Moita" />
             ) : (
               <Image src={text} width={100} alt="Moita" />

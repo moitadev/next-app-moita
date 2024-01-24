@@ -5,7 +5,7 @@ import { useTheme } from '@/context/ThemeContext';
 import styles from './toggleswitch.module.scss';
 
 export const ToggleSwitch = () => {
-  const { isDarkMode, toggleTheme } = useTheme();
+  const { isLightMode, toggleTheme } = useTheme();
 
   return (
     <div className={styles.toggleSwitch}>
@@ -13,12 +13,12 @@ export const ToggleSwitch = () => {
         type="checkbox"
         id="toggle"
         className={styles.toggleCheckbox}
-        checked={isDarkMode}
+        checked={isLightMode}
         onChange={toggleTheme}
       />
       <label htmlFor="toggle" className={styles.toggleLabel}>
         <div className={styles.toggleHandle}>
-          {isDarkMode ? <SunOutline /> : <MoonOutline />}
+          {isLightMode ? <SunOutline /> : <MoonOutline />}
         </div>
       </label>
     </div>
