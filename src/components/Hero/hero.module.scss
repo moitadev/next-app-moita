@@ -1,0 +1,49 @@
+@use '@/styles/variables.scss' as *;
+
+.hero {
+  .header_hero {
+    font-size: 5.5dvw;
+  }
+  .header_wrapper {
+    min-height: 90dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+  .italic {
+    display: inline-block;
+    animation-name: italic;
+    animation-duration: 0.8s;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+  }
+  .welcome_box {
+    position: relative;
+    height: 35dvh;
+    img {
+      border-radius: 15px;
+    }
+  }
+  .smaller_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    .inner_box {
+      background-color: var(--bg-300);
+      border-radius: 15px;
+      padding: 20px;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      transition: background-color 0.3s;
+      font-size: 64px;
+      &:hover {
+        background-color: var(--color-100);
+        color: var(--bg-100);
+      }
+    }
+  }
+}
