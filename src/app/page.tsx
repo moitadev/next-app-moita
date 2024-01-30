@@ -1,66 +1,36 @@
 'use client';
 
-import { Navbar } from '@/components';
+import { Navbar, Hero, Footer } from '@/components';
 import '@/styles/styles.scss';
-import Image from 'next/image';
-import { BiLogoLinkedin, BiLogoGithub } from 'react-icons/bi';
-import bgImg from '@/assets/bg-img.png';
 
 const Home = () => {
   return (
     <>
       <Navbar />
-      <section className="hero">
+      <Hero />
+      <section className="about">
         <div className="container">
-          <div className="row">
-            <div className="col col-12">
-              <h1 className="header-hero">
-                Your <span className="italic">fr</span>iendly neighborhood
-              </h1>
-              <h1 className="header-hero">
-                <span className="italic">Fr</span>ont-end Developer, Moita!
-              </h1>
+          <div className="row justify-space-between">
+            <div className="col col-4">
+              <p>(001)</p>
             </div>
-          </div>
-          <div className="row">
-            <div className="col col-3">
-              <small>
-                Bringing your ideas
-                <br />
-                to digital reality since 2019.
-              </small>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col col-10">
-              <div className="welcome-box">
-                <Image fill={true} src={bgImg} alt="welcome" />
-              </div>
-            </div>
-            <div className="col col-2">
-              <div className="smaller-box">
-                <div className="inner-box">
-                  <a
-                    href="https://github.com/moitadev"
-                    target="_blank"
-                    className="link-absolute"
-                  ></a>
-                  <BiLogoGithub />
-                </div>
-                <div className="inner-box">
-                  <a
-                    href="https://www.linkedin.com/in/msales97/"
-                    target="_blank"
-                    className="link-absolute"
-                  ></a>
-                  <BiLogoLinkedin />
-                </div>
-              </div>
+            <div className="col col-8">
+              <h2>
+                Bringing your ideas to
+                <br /> digital reality since 2019.
+              </h2>
+              <h4 className="secondary-text">
+                I specialize in crafting seamless and visually stunning<br/>
+                front-end experiences. Every project is a blend of innovation,<br/>
+                clean code and cutting-edge design, ensuring your vision is<br/>
+                not just created, but truly brought to life
+              </h4>
+              <a className="highlight-link" href="#"><h5>More about me and services</h5></a>
             </div>
           </div>
         </div>
       </section>
-      <div className="noise"></div>
+      <Footer />
     </>
   );
 };
