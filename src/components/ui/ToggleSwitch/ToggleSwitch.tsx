@@ -17,9 +17,7 @@ export const ToggleSwitch = () => {
         onChange={toggleTheme}
       />
       <label htmlFor="toggle" className={styles.toggleLabel}>
-        <div className={styles.toggleHandle}>
-          {isLightMode ? <SunOutline /> : <MoonOutline />}
-        </div>
+        <div className={styles.toggleHandle}></div>
       </label>
     </div>
   );

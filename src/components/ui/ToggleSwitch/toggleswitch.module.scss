@@ -1,6 +1,7 @@
 @use '@/styles/variables.scss' as *;
 
 .toggleSwitch {
+  width: 45px;
   position: relative;
   display: inline-block;
 }
@@ -11,12 +12,17 @@
 
 .toggleLabel {
   display: block;
-  width: 55px;
-  height: 26px;
-  background-color: var(--bg-300);
+  width: 20px;
+  height: 20px;
   border-radius: 25px;
   position: relative;
   cursor: pointer;
+  transition: all 0.5s;
+  &:hover {
+    width: 45px;
+    background-color: var(--bg-300);
+    transition: all 0.5s ;
+  }
 }
 
 .toggleHandle {
@@ -24,16 +30,20 @@
   top: 50%;
   left: 2px;
   transform: translateY(-50%);
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   padding: 2px;
-  background-color: var(--color-100);
+  background-color: var(--bg-200);
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
+  animation-name: rotateInverse;
+  animation-duration: 0.3s;
 }
 
 .toggleCheckbox:checked + .toggleLabel .toggleHandle {
-  left: calc(100% - 23px);
+  left: calc(100% - 18px);
   transform: translateY(-50%);
   transition: all 0.3s ease-in-out;
+  animation-name: rotate;
+  animation-duration: 0.3s;
 }
